@@ -16,7 +16,7 @@ const _ = {
       end = start;
       start = temp;
     }
-    
+
     if (number < start) {
        return false;
     }else if (number >= end) {
@@ -24,6 +24,10 @@ const _ = {
     }else {
        return true;
     }
+  },
+  words(string) {
+    const words = string.split(" ");
+    return words
   }
 };
 
