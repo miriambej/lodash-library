@@ -28,6 +28,13 @@ const _ = {
   words(string) {
     const words = string.split(" ");
     return words
+  },
+  pad(string, length) {
+    if (length <= string.length) {return string};
+    const startPaddingLength = Math.floor((length - string.length) / 2);
+    const endPaddingLength = length - string.length - startPaddingLength;
+    const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
+    return paddedString;
   }
 };
 
