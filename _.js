@@ -35,7 +35,15 @@ const _ = {
     const endPaddingLength = length - string.length - startPaddingLength;
     const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
     return paddedString;
+  },
+  has(object, key) {
+    if(object.hasOwnProperty(key)) {
+      return true;
+    }else {
+      return false;
+    }
   }
+
 };
 
 
