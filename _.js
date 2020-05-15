@@ -51,6 +51,13 @@ const _ = {
       invertedObject = {originalValue : key}
     }
     return invertedObject;
+  },
+  drop(array, n) {
+    if (!n) {
+      n = 1;
+    }
+    let droppedArray = array.slice(n);
+    return droppedArray;
   }
 
 };
