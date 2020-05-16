@@ -52,6 +52,17 @@ const _ = {
     }
     return invertedObject;
   },
+  //This method returns the key of the first element predicate returns truthy.
+  findKey(object, predicate) {
+    for(let key in object) {
+      let value = object[key];
+      let predicateReturnValue = predicate(value);
+      if(predicateReturnValue) {
+        return key;
+      };
+    };
+    return undefined;
+  },
   //Creates a slice of array with n elements dropped from the beginning.
   drop(array, n) {
     if (!n) {
@@ -67,6 +78,7 @@ const _ = {
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
   }
+  //Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 
 };
 
