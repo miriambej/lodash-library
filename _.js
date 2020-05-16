@@ -43,8 +43,8 @@ const _ = {
       return false;
     }
   },
+  //Creates an object composed of the inverted keys and values of object. If object contains duplicate values, subsequent values overwrite property assignments of previous values.
   invert(object) {
-    //{ 'a': 1, 'b': 2, 'c': 1 }
     let invertedObject = {};
     for(let key in object) {
       let originalValue = object[key]; //1
@@ -52,6 +52,7 @@ const _ = {
     }
     return invertedObject;
   },
+  //Creates a slice of array with n elements dropped from the beginning.
   drop(array, n) {
     if (!n) {
       n = 1;
@@ -59,6 +60,7 @@ const _ = {
     let droppedArray = array.slice(n);
     return droppedArray;
   },
+  //Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate returns falsey. The predicate is invoked with three arguments: (value, index, array).
   dropWhile(array, predicate) {
     let x = (element, index) => !predicate(element, index, array);
     let dropNumber = array.findIndex(x);
