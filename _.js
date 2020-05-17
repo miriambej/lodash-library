@@ -83,11 +83,10 @@ const _ = {
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
   }
-  
+  //Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 
 };
 
 
 
-// Do not write or modify code below this line.
 module.exports = _;
