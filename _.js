@@ -5,7 +5,7 @@ const _ = {
     const lowerClampedValue = Math.max(number, lower);
     const clampedValue = Math.min(lowerClampedValue, upper);
     return clampedValue;
-
+  },
   //Checks if number is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end the params are swapped to support negative ranges.
   inRange(number, start, end) {
     if(end === undefined) {
@@ -82,12 +82,9 @@ const _ = {
     let dropNumber = array.findIndex(x);
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
-  }
+  },
   //Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
-  chunk(array, size) {
-    if(!size) {
-      size = 1;
-    }
+  chunk(array, size=1) {
     let arrayChunks = [];
     for(let i=0; i < array.length; i+=size) {
       let number = i+size;
